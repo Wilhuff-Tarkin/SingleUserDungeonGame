@@ -1,23 +1,28 @@
 package Map;
 
 public class MapTile {
+    public int getId() {
+        return id;
+    }
 
-    int id;
-    String description;
+    public void setId(int id) {
+        this.id = id;
+    }
 
-//    MapTile north;
-//    MapTile south;
-//    MapTile east;
-//    MapTile west;
+    public String getDescription() {
+        return description;
+    }
 
-    //, MapTile north, MapTile south, MapTile east, MapTile west
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    private int id;
+    private String description;
 
     public MapTile(int id, String description) {
         this.id = id;
         this.description = description;
-//        this.north = north;
-//        this.south = south;
-//        this.east = east;
-//        this.west = west;
     }
+
 }

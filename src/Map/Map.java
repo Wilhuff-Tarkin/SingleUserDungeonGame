@@ -2,14 +2,21 @@ package Map;
 
 public class Map {
 
+    MapTile n1 = new MapTile(1, "start");
+    MapTile n0 = new MapTile(0, "sciana");
+    MapTile n2 = new MapTile(2, "mozna chodzic");
+    MapTile n3 = new MapTile(3, "meta");
 
-    MapTile start = new MapTile(0, "startowa lokacja");
-    MapTile koniec = new MapTile(4, "to jest koniec drogi");
-    MapTile korytarz1 = new MapTile(1, "ciemny korytarz");
+    MapTile [][] glownaMapa = new MapTile[][]{
+            { n0, n0, n0, n0, n3, n0, n0, n0, n0, n0 },
+            { n0, n2, n2, n2, n2, n2, n2, n2, n2, n0 },
+            { n0, n2, n2, n2, n2, n2, n2, n2, n2, n0 },
+            { n0, n2, n2, n2, n2, n2, n2, n2, n2, n0 },
+            { n0, n0, n0, n0, n1, n0, n0, n0, n0, n0 }
+    };
 
-    MapTile [][] glownaMapa = new MapTile[2][2];
-
-    
-
+    public MapTile initialPosition (){
+        return n1;
+    }
 
 }

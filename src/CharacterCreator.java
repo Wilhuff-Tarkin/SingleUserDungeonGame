@@ -5,12 +5,11 @@ public class CharacterCreator {
 
     private static String nameSelector (){
         System.out.println("Podaj imie");
-
         Scanner scanner = new Scanner(System.in);
         return scanner.next();
     }
 
-    private static int classSelector () throws InterruptedException {
+    private static int classSelector () {
 
         System.out.println();
         System.out.println("Wybierz postac:");

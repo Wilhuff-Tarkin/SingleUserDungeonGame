@@ -1,5 +1,8 @@
+import Map.MapTile;
+
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Character {
 
@@ -7,6 +10,30 @@ public class Character {
     String proffesion;
     int hp;
     int dmg;
+    MapTile position;
+
+
+    public void setProffesion(String proffesion) {
+        this.proffesion = proffesion;
+    }
+
+    public MapTile getPosition() {
+        return position;
+    }
+
+    public void setPosition(MapTile position) {
+        this.position = position;
+    }
+
+    public Scanner getScanner() {
+        return scanner;
+    }
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    Scanner scanner = new Scanner(System.in);
 
 
 
@@ -33,9 +60,6 @@ public class Character {
     public void setName(String name) {
         this.name = name;
     }
-
-
-
 
 
     public int getHp() {
@@ -69,4 +93,24 @@ public class Character {
     public void setEquipment(List<String> equipment) {
         this.equipment = equipment;
     }
+
+    public void move (char direction){
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
