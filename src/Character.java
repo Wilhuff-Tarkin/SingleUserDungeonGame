@@ -10,20 +10,30 @@ public class Character {
     String proffesion;
     int hp;
     int dmg;
-    MapTile position;
+    int positionX;
+    int positionY;
 
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
 
     public void setProffesion(String proffesion) {
         this.proffesion = proffesion;
     }
 
-    public MapTile getPosition() {
-        return position;
-    }
 
-    public void setPosition(MapTile position) {
-        this.position = position;
-    }
 
     public Scanner getScanner() {
         return scanner;
