@@ -1,5 +1,3 @@
-import Map.MapTile;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,7 +16,7 @@ public class Character {
     }
 
     public void setPositionX(int positionX) {
-        this.positionX = positionX;
+       this.positionX = positionX;
     }
 
     public int getPositionY() {

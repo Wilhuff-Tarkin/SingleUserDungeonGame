@@ -13,28 +13,48 @@ public class Main {
         MapTile position = Mapa.currentTile(player.positionX, player.positionY);
         testCharacterCreation (player, position);
         displayInstructions();
-        startGame(player, position);
+        startGame(player, position, Mapa);
 
     }
 
-    private static void startGame(Character player, MapTile position) {
+    private static void startGame(Character player, MapTile position, MainMap mapa) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("gdzie chce isc");
-        String decision = scanner.next();
+
+
+        while (player.hp > 0 && player.torchTime > 0){
+            System.out.println("gdzie chce isc");
+            String decision = scanner.next();
 
         switch (decision) {
-            case "w": player.setPositionY(player.positionY+= 1); break;
-            case "s": player.setPositionY(player.positionY-= 1); break;
-            case "a:": player.setPositionX(player.positionX+= 1); break;
-            case "d": player.setPositionX(player.positionX-= 1); break;
+            case "w":
+                player.positionX -= 1;
+                break;
+            case "s":
+                player.positionX += 1;
+                break;
+            case "a:":
+                player.positionY -= 1;
+                break;
+            case "d":
+                player.positionY += 1;
+                break;
+            case "x":
+                int x = player.getPositionX();
+                int y = player.getPositionY();
+                System.out.println("x = " + x + ", y = " + y);
+                break;
+
+        }
+            position = mapa.currentTile(player.positionX, player.positionY);
+            System.out.println("Twoja pozycja to " + position.getDescription());
+
         }
 
-        System.out.println("Twoja pozycja to " + position.getDescription());
 
     }
 
     private static void displayInstructions() {
-        System.out.println("w s a d - zeby sie poruszac");
+        System.out.println("w s a d - zeby sie poruszac, x zeby zobaczyc gdzie jestes teraz");
 
     }
 
